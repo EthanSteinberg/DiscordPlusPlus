@@ -1,0 +1,10 @@
+.reply-button {
+	display: none;	
+}
+
+.message:hover .reply-button {
+	display: block;
+	cursor: pointer; 
+	float: right;
+	margin-left: 10px;
+}
