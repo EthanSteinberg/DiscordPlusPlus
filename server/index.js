@@ -28,6 +28,12 @@ var server = require('http').createServer(app);
 
 var stars = JSON.parse(fs.readFileSync('stars.json', 'utf8'));
 
+app.use(function (req, res, next) {
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    next();
+});
+
 app.get('/star_data', function (req, res) {
     if (req.query.id == undefined) {
         res.json(stars);

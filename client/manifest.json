@@ -8,9 +8,6 @@
     "js": ["data/jquery.js", "data/polyfill.js", "data/background.js"],
     "css": ["data/style.css"]
   }],
-  "permissions": [
-    "http://localhost:3000/"
-  ],
   "manifest_version": 2,
   "web_accessible_resources": ["data/poop.png", "data/grayPoop.png"]
 }

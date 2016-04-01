@@ -1,7 +1,7 @@
 // There is nothing but ugly hacks beyond this point.
 // Stop here if you value your sanity.
 
-var host = 'localhost:3000';
+var host = 's://stargazerserver.me';
 
 function findNthIndex(string, character, n) {
     var lastIndex = 0;
@@ -40,7 +40,7 @@ var lastThingy = null;
 function postJSON(location, data) {
     $.ajax({
         type: "POST",
-        url: 'http://' + host + "/" + location,
+        url: 'http' + host + "/" + location,
         data: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
     });
@@ -49,7 +49,7 @@ function postJSON(location, data) {
 function getStarData(id, callback) {
     return $.ajax({
         type: "GET",
-        url: 'http://' + host + "/star_data",
+        url: 'http' + host + "/star_data",
         data: {id: id},
         success: callback,
     });
@@ -331,7 +331,7 @@ $(function(){
     removedMessageShower();
     starboardShower();
 
-    var socket = new WebSocket('ws://' + host);
+    var socket = new WebSocket('ws' + host + '/ws/');
     socket.onmessage = function(e) {
         var message = JSON.parse(e.data);
 
