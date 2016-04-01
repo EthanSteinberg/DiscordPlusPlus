@@ -298,7 +298,7 @@ function createStarBoard(stardata) {
 
 function starboardShower() {
     function showStarboard(board) {
-        getStarData('', function(data) {
+        getStarData(undefined, function(data) {
             board.prepend(createStarBoard(data));
         });
     };

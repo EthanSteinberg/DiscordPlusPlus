@@ -29,7 +29,7 @@ var server = require('http').createServer(app);
 var stars = JSON.parse(fs.readFileSync('stars.json', 'utf8'));
 
 app.get('/star_data', function (req, res) {
-    if (req.query.id == '') {
+    if (req.query.id == undefined) {
         res.json(stars);
     } else {
         res.json(stars[req.query.id] || {});
