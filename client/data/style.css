@@ -1,0 +1,43 @@
+.visible-star-button {
+}
+
+.star-board-entry .star-button {
+	float: none;
+}
+
+.star-img {
+	width: 16px;
+	height: 16px;
+}
+
+.star-button {
+	cursor: pointer;
+	float: right;
+	margin-left: 10px;
+	min-width: 30px;
+	display: inline-block;
+}
+
+.star-board-entry {
+	font-size: 15px;
+	color: #737f8d;
+}
+
+.hidden-star-button {
+	visibility: hidden;
+}
+
+.message:hover .hidden-star-button {
+	visibility: visible;
+}
+
+.reply-button {
+	visibility: hidden;
+	cursor: pointer;
+	float: right;
+	margin-left: 10px;
+}
+
+.message:hover .reply-button {
+	visibility: visible;
+}
