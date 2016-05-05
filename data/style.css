@@ -1,5 +1,5 @@
 .reply-button {
-	display: none;	
+        visibility: hidden;
 }
 
 .message:hover .reply-button {
