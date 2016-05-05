@@ -1,0 +1,10 @@
+.reply-button {
+        visibility: hidden;
+	float: right;
+	margin-left: 10px;
+}
+
+.message:hover .reply-button {
+        visibility: visible;
+	cursor: pointer; 
+}
